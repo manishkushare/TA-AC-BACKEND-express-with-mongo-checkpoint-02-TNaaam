@@ -1,0 +1,30 @@
+.header-index,.header {
+    padding: 2rem 0;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    z-index: 5;
+    .flex {
+        justify-content: center;
+        a{
+            color: rgb(159,158,157);
+            text-decoration: none;
+            font-weight: 900;
+            span {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.header{
+    background-color: rgb(222,184,135);
+    position: relative;
+    .flex{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}

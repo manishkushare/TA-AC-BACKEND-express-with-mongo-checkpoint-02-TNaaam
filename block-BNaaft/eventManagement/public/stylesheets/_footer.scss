@@ -1,0 +1,19 @@
+.footer{
+    padding: 2rem 0;
+    background-color: khaki;
+    // position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer-content{
+    text-align: center;
+    .nav{
+        a{
+            text-decoration: none;
+            button{
+                background-color: rgb(222,184,135);
+            }
+        }
+    }
+}
