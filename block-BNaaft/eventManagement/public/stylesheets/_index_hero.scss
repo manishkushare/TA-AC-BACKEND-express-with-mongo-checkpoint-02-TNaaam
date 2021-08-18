@@ -1,0 +1,43 @@
+.index_hero{
+    height: 100vh;
+    background-image: url(/images/index-hero-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // filter: blur(4px);
+    position: relative;
+    
+    .flex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color:rgb(8, 7, 7);
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            span {
+                font-size: 2.25rem;
+                color: rgb(222,184,135);
+                font-weight: 900;
+            }
+        }
+        p {
+            margin: 1rem 0;
+            font-weight: 600;            
+        }
+    }
+}
+
+.index_hero{
+    button {
+        padding: 0.5rem 2.5rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        border-radius: 2rem;
+        box-shadow: 0;
+        border: none;
+        background-color: burlywood;
+    }
+}

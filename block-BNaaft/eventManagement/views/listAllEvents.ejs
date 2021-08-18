@@ -1,0 +1,60 @@
+<%- include('partials/header') -%>
+
+    <main>
+        <section class="hero">
+            <div class="container grid position">
+                <div class="col1">
+                    <% events.forEach(event => { %>
+                        <div class="event-block ">
+                                <div class="image">
+                                    <img src="/images/index-hero-background.jpg" alt="">
+                                    
+                                </div>
+                                <div class="content">
+                                    <h2><%= event.title %></h2>
+                                    <a href="/events/<%= event.id%>">
+                                        <button class="btn">Learn More</button>
+                                    </a>
+                                </div>
+                            
+                        </div>
+                    <% }) %>
+                    
+                </div>
+                <div class="col2">
+                    <div>
+                        <h2>Categories :</h2>
+                        <div class="grid">
+                            <% categories.forEach(cat => { %>
+                                <div>
+                                    <a href="/events/<%= cat%>/sortByCategory">
+                                        <button class="btn"><%= cat%></button>
+                                    </a>
+                                </div>
+                            <% })%>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <h2>Locations:</h2>
+                        <div class="grid">
+                            <% locations.forEach(location => { %>
+                                <div>
+                                    <a href="/events/<%= location%>/sortByLocation">
+                                        <button class="btn"><%= location %></button>
+                                    </a>
+                                </div>
+                            <% })%>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="/events">
+                            <button class="btn">All Events</button>
+                        </a>
+                    </div>
+                        
+                </div>
+        </section>
+        
+    </main>
+    <%- include('partials/footer') -%>

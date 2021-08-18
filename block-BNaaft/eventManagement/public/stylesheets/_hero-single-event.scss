@@ -1,0 +1,33 @@
+.hero-single-event{
+    min-height: 80vh;
+    display: grid;
+    .grid{
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        display: grid;
+        border: 1px solid black;
+        width: fit-content;
+        justify-self: center;
+        background-color: rgb(240,230,140);
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+        padding: 1rem ;
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+    
+}
+.button-container{
+    // border: 2px solid red;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-gap: 40px;
+    padding: 2rem;
+    button {
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+    }
+}

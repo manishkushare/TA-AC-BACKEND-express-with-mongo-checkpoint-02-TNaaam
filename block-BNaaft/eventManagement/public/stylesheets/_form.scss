@@ -1,0 +1,21 @@
+.create-form{
+    position: relative;
+    .form{
+        position: absolute;
+        background-color: khaki;
+        top: 0;
+        left: 20%;
+        right: 20%;
+        min-height: 80vh;
+        display: flex;
+        margin: 2rem 0;
+        border-radius: 2rem;
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+        .flex{
+            .btn{
+                background-color: rgb(222,184,135);
+            }
+        }
+    }
+}
