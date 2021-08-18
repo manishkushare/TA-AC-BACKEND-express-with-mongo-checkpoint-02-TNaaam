@@ -1,0 +1,45 @@
+<%- include('partials/header') -%>
+<main>
+    <div class="container">
+        <div class="create-form">
+            <form  class="form" action="/events" method="POST">
+                <div class="flex">
+                    Title:
+                    <input type="text" name="title">
+                </div>
+                <div class="flex">
+                    Summary:
+                    <textarea name="summary" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="flex">
+                    Host : 
+                    <input type="text" name="host">
+                </div>
+                <div class="flex">
+                    Start Date :
+                    <input type="date" name="start_Date" id="">
+                </div>
+                <div class="flex">
+                    End Date
+                    <input type="date" name="end_date" id="">
+                </div>
+                <div class="flex">
+                    Category :
+                    <input type="text" name="event_categories">
+                </div>
+                <div class="flex">
+                    Location :
+                    <input type="text" name="location">
+                </div>
+                <div class="flex">
+                    Likes :
+                    <input type="number" name="likes" value="0">
+                </div class="flex">
+                <div class="flex">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</main>

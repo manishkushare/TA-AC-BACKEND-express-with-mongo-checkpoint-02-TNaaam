@@ -1,0 +1,102 @@
+<%- include('partials/header') -%>
+<main>
+    <section class="hero-single-event">
+        <div class="container grid">
+                <div class="content">
+                    <h1>Title : <%= event.title%></h1>
+                    <p>Sumamry : <%=event.summary %></p>
+                    <p>Host :<%= event.host%></p>
+                    <p>Start Date : <%= event.start_date%></p>
+                    <p>End Date : <%= event.end_date%></p>
+                    <ul>
+                        Categories : <% event.event_categories.forEach(cat => { %>
+                            <li><%= cat%></li>
+                        <% })%>
+                    </ul>
+                    <p>Location : <%= event.location%></p>
+                    <p>Likes : <%= event.likes || 0 %></p>
+                </div>
+                <div class="button-container">
+                    <div>
+                        <a href="/events/<%= event.id %>/edit">
+                            <button class="btn">Edit</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/events/<%= event.id%>/delete">
+                            <button class="btn">Delete</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/events/<%= event.id%>/likes/increment">
+                            <button class="btn">Increment</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/events/<%= event.id%>/likes/decrement">
+                            <button class="btn">Decrement</button>
+                        </a>
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+        
+        
+    <section class="form-container">
+        <div class="container">
+            <form  class="form"  action="/events/<%= event.id%>/remark" method="POST">
+                <div class="flex">
+                    Title:
+                    <textarea name="remark_title" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="flex">
+                    Author:
+                    <input type="text" name="remark_author">
+                </div>
+                <div class="flex">
+                    Likes: 
+                    <input type="number" name="remark_likes" value="0">
+                </div>
+                <div class="flex">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+            <div class="remarks" >
+            <% event.remarks.forEach(remark=> { %>
+                <div class="remark">
+                    <h2>Title :<%=remark.remark_title%></h2>
+                    <p>Author :<%= remark.remark_author%></p>
+                    <p>Likes : <%= remark.remark_likes%></p>
+                    <div class="remark-btn-container">
+                        <div>
+                            <a href="/remarks/<%= remark.id%>/edit">
+                                <button class="btn">Edit</button>
+                            </a>
+                        </div>
+                        <div style="margin:0 0.5rem;">
+                            <a href="/remarks/<%= remark.id%>/delete">
+                                <button class="btn">Delete</button>
+                            </a>
+                        </div>
+                        <div >
+                            <a href="/remarks/<%= remark.id%>/likes/increment">
+                                <button class="btn">Increment</button>
+                            </a>
+                        </div>
+                        <div style="margin:0 0.5rem;">
+                            <a href="/remarks/<%= remark.id%>/likes/decrement">
+                                <button class="btn">Decrement</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            <% })%>
+        </div>
+        </div>
+            
+    </section>
+    
+</main>
+<%- include('partials/footer') -%>

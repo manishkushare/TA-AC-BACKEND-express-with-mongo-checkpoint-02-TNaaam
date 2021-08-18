@@ -1,0 +1,30 @@
+<%- include('partials/header') -%>
+<main>
+    <div class="container">
+        <div class="create-form">
+            <form class="form" action="/remarks/<%= remark.id%>" method="POST">
+                <div class="flex">
+                    Title:
+                    <textarea name="remark_title" id="" cols="30" rows="10"><%= remark.remark_title%></textarea>
+                </div>
+                <div class="flex">
+                    Author:
+                    <input type="text" name="remark_author" value="<%= remark.remark_author%>">
+                </div>
+                <div class="flex">
+                    Likes: 
+                    <input type="number" name="remark_likes" value="<%= remark.remark_likes%>">
+                </div>
+                <div class="flex">
+                    <button class="btn" type="submit">Update Remark</button>
+                </div>
+            </form>
+        </form>
+    </div>
+
+    
+</main>
+
+    
+
+    
